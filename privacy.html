@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy — rclone backup client</title>
+<style>
+  body { font: 16px/1.6 -apple-system, Segoe UI, Roboto, sans-serif; max-width: 760px; margin: 60px auto; padding: 0 20px; color: #1b1b1b; background: #fff; }
+  h1 { font-size: 28px; margin-bottom: 8px; }
+  .sub { color: #666; margin-bottom: 32px; }
+  h2 { font-size: 19px; margin-top: 32px; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid #eee; color: #666; font-size: 14px; }
+  a { color: #0b57d0; }
+</style>
+</head>
+<body>
+<h1>Privacy policy</h1>
+<p class="sub">rclone backup client — last updated 24 November 2026</p>
+
+<h2>1. What this application is</h2>
+<p>A personal, single-user command-line tool (rclone) that uploads an encrypted backup archive to its
+owner's own Google Drive account. It is not offered to the public and has one user.</p>
+
+<h2>2. What data it accesses</h2>
+<p>The application requests the <code>https://www.googleapis.com/auth/drive</code> scope because it must
+create, list and delete files in the Drive account it is connected to. In practice it only touches:</p>
+<ul>
+  <li>a dedicated folder, <code>backup/workspace</code>;</li>
+  <li>the archive files it created itself.</li>
+</ul>
+<p>It does not read, index or transmit the contents of any other file, mail, calendar, contacts or photos.</p>
+
+<h2>3. What it stores</h2>
+<p>The OAuth access and refresh tokens are stored in a configuration file on the owner's own computer,
+with file permissions restricted to that user. No token, filename or file content is ever sent to any
+server other than Google's own APIs.</p>
+
+<h2>4. What it does not do</h2>
+<ul>
+  <li>No analytics, telemetry or crash reporting.</li>
+  <li>No sharing of data with third parties.</li>
+  <li>No advertising and no profiling.</li>
+  <li>No collection of personal data of anyone other than the account owner, and none of that leaves the machine.</li>
+</ul>
+
+<h2>5. Backup contents</h2>
+<p>The archive is encrypted with AES-256 on the owner's machine before upload. Encryption keys are kept
+locally and are not uploaded. Backups contain the owner's own working files; data belonging to other
+people or to third-party services is excluded by policy.</p>
+
+<h2>6. Retention and deletion</h2>
+<p>Archives stay in the owner's Google Drive until the owner deletes them; the tool keeps the seven most
+recent ones. Access can be revoked at any time at
+<a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, and the stored
+files can be removed directly from Drive.</p>
+
+<h2>7. Contact</h2>
+<p><a href="mailto:deepy6073@gmail.com">deepy6073@gmail.com</a></p>
+
+<footer><a href="index.html">← Back</a></footer>
+</body>
+</html>
